@@ -53,7 +53,26 @@
         ids.splice(1,0,"c");
         console.log(ids);
         console.log(ids.sort());
-
+        var mul=[['a','b','c'],['d','e','f']];
+        console.log(mul);
+        mul.push(['g','h','i']);
+        console.log(mul);
+        mul[0].splice(1,0,4,5);
+        console.log(typeof(mul));
+        console.log(JSON.stringify(mul));
+        console.log(typeof(mul));
+        console.log(typeof(mul[0][2]));
+        // var sum=0;
+        // function addThree(){
+        //     sum+=3;
+        //     return sum;
+        // }
+        // console.log(addThree());
+        // function addFive(){
+        //     sum+=5;
+        //     return sum
+        // }
+        // console.log(addFive());
     </script>
 </body>
 </html>
