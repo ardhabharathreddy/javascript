@@ -16,6 +16,44 @@
         console.log(ids);
         ids[6]='a';
         console.log(ids);
+        var id=["a","b","c"];
+        console.log(id);
+        console.log(id[1]);
+        id[0]="b";
+        ids.push("b");
+        console.log(id,"''''",ids.length,"'''''",ids);
+        ids.pop();
+        console.log(ids);
+        ids.unshift("a");
+        console.log(ids);
+        ids.shift();
+        console.log(ids);
+        ids.splice(1,1);
+        console.log(ids);
+        ids.splice(2,2,2,3);
+        console.log(ids);
+        ids.splice(1,1,1);
+        console.log(ids);
+        ids.splice(4,1);
+        console.log(ids);
+        console.log(ids.reverse());
+        ids.splice(5,0,'b');
+        console.log(ids.sort(),"***");
+        ids.splice(1,0,565);
+        ids.splice(5,0,'b');
+        console.log(ids);
+        console.log(ids.sort(),"***");
+        ids.pop();
+        ids.push("c");
+        console.log(ids);
+        console.log(ids.reverse());
+        console.log(ids.reverse());
+        ids.pop();
+        ids.push("d");
+        ids.splice(1,0,"c");
+        console.log(ids);
+        console.log(ids.sort());
+
     </script>
 </body>
 </html>
