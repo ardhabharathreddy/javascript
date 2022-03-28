@@ -1,0 +1,26 @@
+.parent
+{
+    height:50vh;
+}
+.parent>.col{
+    padding: 1em;
+    border: 0.1em solid black;
+}
+.container-fluid{
+    padding: 1em;
+}
+
+.buttons{
+    /* display: flex;
+    align-items: center;
+    justify-content: center; */
+    height: 50%;
+}
+.box>.row{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.buttona{
+    word-break: break-all;
+}
