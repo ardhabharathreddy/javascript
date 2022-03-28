@@ -19,23 +19,23 @@
                   <h2>CALCULATOR</h2>
                 </div>
                 <div class="row">
-                  <input type="number" id="number1" placeholder="number1" style="align-items: center;"><br>
+                  <input type="number" id="number1" placeholder="number1"><br>
                 </div>
                 <div class="row">
                   <input type="number" id="number2" placeholder="number2">
                 </div>
             <div class="row buttons">
                 <div class="col">
-                    <button class="btn btn-outline-light text-dark buttona" type="button" onclick="sum()">+</button>
+                    <button class="btn btn-outline-dark buttona" type="button" onclick="sum()">+</button>
                 </div>
                 <div class="col">
-                    <button class="btn btn-outline-light text-dark buttona" type="button" onclick="diff()">-</button>
+                    <button class="btn btn-outline-dark buttona" type="button" onclick="diff()">-</button>
                 </div>
                 <div class="col">
-                    <button class="btn btn-outline-light text-dark buttona" type="button" onclick="mul()">*</button>
+                    <button class="btn btn-outline-dark buttona" type="button" onclick="mul()">*</button>
                 </div>
                 <div class="col">
-                    <button class="btn btn-outline-light text-dark buttona" type="button" onclick="div()">%</button>
+                    <button class="btn btn-outline-dark buttona" type="button" onclick="div()">%</button>
                 </div>
             </div>
         </div>
@@ -47,19 +47,54 @@
                 <input type="number" placeholder="number" id="number3">
             </div>
             <div class="row buttons">
-                <div class="col"><button class="btn btn-outline-light text-dark buttona" type="button" onclick="squ()">x<sup>2</sup></button></div>
-                <div class="col"><button class="btn btn-outline-light text-dark buttona" type="button" onclick="cube()">x<sup>3</sup></button></div>
-                <div class="col"><button class="btn btn-outline-light text-dark buttona" type="button" onclick="fact()">x!</button></div>
+                <div class="col"><button class="btn btn-outline-dark buttona" type="button" onclick="squ()">x<sup>2</sup></button></div>
+                <div class="col"><button class="btn btn-outline-dark buttona" type="button" onclick="cube()">x<sup>3</sup></button></div>
+                <div class="col"><button class="btn btn-outline-dark buttona" type="button" onclick="fact()">x!</button></div>
             </div>
         </div>
-        <div class="col">
-            col3
+        <div class="col box">
+            <div class="row">
+              <h2>Recatngle</h2>
+            </div>
+            <div class="row"> 
+              <input type="number" id="number3" placeholder="Length"><br>
+            </div>
+            <div class="row">
+              <input type="number" id="number4" placeholder="width">
+            </div>
+        <div class="row buttons">
+            <div class="col">
+                <button class="btn btn-outline-dark buttona" id="result1" type="button" onclick="area()">Area</button>
+            </div>
+            <div class="col">
+                <button class="btn btn-outline-dark buttona" id="result2" type="button" onclick="perimeter()">Perimeter</button>
+            </div>
         </div>
+        <!-- <div class="row buttons">
+               <mark id="result3"></mark>
+        </div> -->
+    </div>
     </div>
     <div class="row parent">
-        <div class="col">
-            col1
+        <div class="col box">
+            <div class="row">
+              <h2>BMI</h2>
+            </div>
+            <div class="row">
+              <input type="number" id="height" placeholder="Height"><br>
+            </div>
+            <div class="row">
+              <input type="number" id="width" placeholder="Weight">
+            </div>
+        <div class="row buttons">
+            <div class="col">
+                <button class="btn btn-outline-dark buttona" type="button" onclick="bmi()">Calculate</button>     
+            </div>
         </div>
+        <div class="row">
+            <mark id="result3">Obesity</mark>
+        </div>
+    </div>
         <div class="col">
             col2
         </div>
@@ -111,7 +146,40 @@
             {
                 n*=i;
             }
-            alert(parseInt(n));
+            alert(n);
+        }
+        function area()
+        {
+            var a=document.getElementById("number4").value;
+            var b=document.getElementById("number4").value;
+            document.getElementById("result1").innerHTML="Area is:"+parseInt(a)*parseInt(b);
+        }
+        function perimeter()
+        {
+            var a=document.getElementById("number4").value;
+            var b=document.getElementById("number4").value;
+            document.getElementById("result2").innerHTML="Perimeter is:"+(parseInt(a)*parseInt(b))*2;
+        }
+        function bmi()
+        {
+            var h=parseFloat(document.getElementById("height").value);
+            var w=parseFloat(document.getElementById("width").value);
+            
+            var b=w/(h*h);
+            //    document.getElementById("result3").innerHTML=b;
+            if(30.0<=b)
+            {
+                document.getElementById("result3").innerHTML="Very overweight";
+            }
+            else if(25.0<=b && 29.9>=b){
+                document.getElementById("result3").innerHTML="Overweight";
+            }
+            else if(18.5<=b && 24.9>=b){
+                document.getElementById("result3").innerHTML="Normal";
+            }
+            else{
+                document.getElementById("result3").innerHTML="Underweight";
+            }
         }
     </script>
 </body>

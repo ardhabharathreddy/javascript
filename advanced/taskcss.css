@@ -14,13 +14,24 @@
     /* display: flex;
     align-items: center;
     justify-content: center; */
-    height: 50%;
+    height: 25%;
 }
 .box>.row{
     display: flex;
     align-items: center;
     justify-content: center;
 }
-.buttona{
-    word-break: break-all;
+.buttons .col{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.box{
+    padding: 1em;
+}
+input[type="number"]{
+    border: 0.01em solid gray;
+    border-radius: 15em;
+    margin: 0.5em;
+    width: 100%;
 }
