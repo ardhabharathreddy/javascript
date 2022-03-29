@@ -95,11 +95,40 @@
             <mark id="result3">Obesity</mark>
         </div>
     </div>
-        <div class="col">
-            col2
+        <div class="col" id="colore">
+            <div class="row">
+                <h2>BACKGROUND</h2>
+            </div>
+            <div class="row buttons">
+                <div class="col">               
+                    <button class="btn btn-outline-dark buttona colour" id="red" type="button" onclick="change('red')">Red</button>     
+                </div>
+                <div class="col">                
+                    <button class="btn btn-outline-dark buttona colour" id="blue" type="button" onclick="change('blue')">Blue</button>     
+                </div>
+                <div class="col">              
+                    <button class="btn btn-outline-dark buttona colour" id="green" type="button" onclick="change('green')">Green</button>     
+                </div>
+            </div>
         </div>
         <div class="col">
-            col3
+            <div class="row" id="abc" style="height:70%;">
+
+            </div>
+            <div class="row buttons" style="height:30%;">
+                <div class="col">
+                    <button class="btn btn-outline-dark buttona" type="button" onclick="square()">Square</button>
+                </div>
+                <div class="col">
+                    <button class="btn btn-outline-dark buttona" type="button" onclick="circle()">Circle</button>
+                </div>
+                <div class="col">
+                    <button class="btn btn-outline-dark buttona" type="button" onclick="change1('red')">Red</button>
+                </div>
+                <div class="col">
+                    <button class="btn btn-outline-dark buttona" type="button" onclick="change1('blue')">Blue</button>
+                </div>
+            </div>
         </div>
     </div>
     </div>
@@ -108,6 +137,16 @@
         {
            var a=document.getElementById("number1").value;
            var b=document.getElementById("number2").value;
+           var c=[1,2,3,4,5];
+        //    function s(c,d){
+        //        c+d
+        //    }
+        //    console.log(sum(1,2));
+        //    console.log('a',"a",a,typeof(c));
+        //    for()
+        //    {
+        //        console.log("abc");
+        //    }
            alert(parseInt(a)+parseInt(b));
         }
         function diff()
@@ -180,6 +219,27 @@
             else{
                 document.getElementById("result3").innerHTML="Underweight";
             }
+        }
+        function change(a)
+        {
+           
+            document.getElementById('colore').style.backgroundColor=a;
+        }
+        function change1(a)
+        {
+            document.getElementById('abc').style.backgroundColor=a;
+        }
+        function square()
+        {
+            document.getElementById("abc").style.padding="2em";
+            document.getElementById("abc").style.border="1em solid black";
+            document.getElementById("abc").style.borderRadius="0";
+            
+        }
+        function circle()
+        {
+            document.getElementById("abc").style.border="1em solid black";
+            document.getElementById("abc").style.borderRadius="50%";
         }
     </script>
 </body>
