@@ -95,20 +95,20 @@
             <mark id="result3">Obesity</mark>
         </div>
     </div>
-        <div class="col" id="colore">
+        <div class="col box" id="colore">
             <div class="row">
-                <h2>BACKGROUND</h2>
+                <h2>BACKGROUND:<h2 id="colorDisplay"></h2></h2>
             </div>
             <div class="row buttons">
                 <div class="col">               
-                    <button class="btn btn-outline-dark buttona colour" id="red" type="button" onclick="change('red')">Red</button>     
+                    <button class="btn btn-outline-dark buttona colour" id="red" type="button" onclick="change()">Click!</button>     
                 </div>
-                <div class="col">                
+                <!-- <div class="col">                
                     <button class="btn btn-outline-dark buttona colour" id="blue" type="button" onclick="change('blue')">Blue</button>     
                 </div>
                 <div class="col">              
                     <button class="btn btn-outline-dark buttona colour" id="green" type="button" onclick="change('green')">Green</button>     
-                </div>
+                </div> -->
             </div>
         </div>
         <div class="col">
@@ -220,10 +220,13 @@
                 document.getElementById("result3").innerHTML="Underweight";
             }
         }
-        function change(a)
+        function change()
         {
-           
-            document.getElementById('colore').style.backgroundColor=a;
+           const color=["green","red","rgba(133,122,200)","#f15025"];
+           var getRandom=Math.floor(Math.random()*color.length);
+           console.log(getRandom);
+            document.getElementById('colore').style.backgroundColor=color[getRandom]    ;
+            document.getElementById("colorDisplay").innerHTML=color[getRandom];
         }
         function change1(a)
         {
